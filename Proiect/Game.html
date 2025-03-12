@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="game.css">
+<script src="Game.js"> </script>
+</head>
+<body>
+<header>
+ <div>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="./Main.html"><li>Store</li></a>
+      <a href="./About.html"><li>About</li></a>
+      <a href="./Support.html"><li>Support</li></a>
+    </ul>
+  </div>
+</div>
+   <div class="titles">
+    <div class="Name_and_Logo">
+      <a href="./Main.html"><img src="Logo.jpg" width="60" height="60"> </img></a>
+	  <a href="./Main.html"> <div class="Name"> GAMESTART </div></a>
+	</div>
+   </div>
+ </header>
+ <main id="main">
+ <button id="start"> START </button>
+ <div class='culoare1'>
+   <label for="colorPicker">Select a color for shape:</label>
+   <input type="color" id="colorPicker">
+ </div>
+ <div class='forma1'>
+   <label for='formaPicker'>Selectati ce forma vreti: </label>
+        <select id="formaPicker" required>
+          <option value="">Choose an option</option>
+          <option value="1">Patrat</option>
+          <option value="2">Cerc</option>
+        </select>
+ </div>
+ <div class='culoare2'>
+   <label for="colorPicker2">Select a color for shape 2:</label>
+   <input type="color" id="colorPicker2">
+ </div>
+   <canvas id="myCanvas" width="200" height="200"></canvas>
+ </main>
+ <footer>
+ </footer>
+</body>
+</html>

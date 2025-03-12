@@ -1,0 +1,264 @@
+body{
+	display:grid;
+	min-height: 100vh;
+	margin: 0;
+	grid-template-rows: 1fr 5fr;
+	grid-template-areas:
+	    'header'
+	    'main';
+	background-color:hsl(212, 50%, 20%);
+}
+header{
+   background-color: hsl(215, 50%, 34%);
+   height:100%;
+   position:relative;
+   bottom:30%;
+}
+main{
+   background-color:hsl(212, 50%, 20%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   font-size:150%;
+}
+h3{
+	display:flex;
+	justify-content:center;
+	color:white;
+}
+.container{
+    position:relative;
+	right:200px;
+}
+.Name_and_Logo{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.Name_and_Logo img{
+	width:100px;
+	height:100px;
+}
+div.Name_and_Logo >a:link{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+div.Name_and_Logo >a:visited{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+div.Name_and_Logo >a:hover{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+div.Name_and_Logo >a:active{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+.Search_and_items{
+	position: relative;
+	left:500px;
+	top:40px;
+	display: flex;
+	height:50px;
+	width:1000px;
+	align-items:center;
+	background-color:hsl(185, 60%, 53%);
+	justify-content:space-between;
+}
+.Elements  ul{
+ list-style: none;
+}
+.Elements ul li{
+ display:inline-block;
+ position:relative;
+}
+.Elements ul li a{
+   display:block;
+   padding:5px;
+   color: white;
+   text-decoration:none;
+   font-size:20px;
+}
+
+.Elements ul li ul.dropdown li{
+ display:block;
+}
+.Elements ul li ul.dropdown{
+ width:100%;
+ background: hsl(185, 60%, 53%);
+ position: absolute;
+ z-index:999;
+ display:none;
+ left:0;
+ top:100%;
+}
+.Elements ul li a:hover{
+ text-decoration:underline;
+ background: hsl(195, 60%, 53%);
+ block-size:auto;
+}
+.Elements ul li:hover ul.dropdown{
+  display:block;
+  padding: 0;
+}
+.search-bar{
+  width:100%;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+}
+.search-bar input{
+  background:hsl(215, 50%, 34%);
+  font-size:20px;
+  color:white;
+}
+.search-bar input::placeholder{
+  color:white;
+  opacity:1;
+}
+.Lista{
+  position:absolute;
+  left:70px;
+  top:250px;
+}
+.Lista img{
+ width:300px;
+ height:200px;
+}
+.Lista .Scris{
+ font-size:30px;
+ gap:20px;
+}
+.Lista .Scris ul{
+ list-style: none;
+}	
+.Lista .Scris ul li{
+ padding:5px;
+}
+.Lista .Scris ul li >a:link{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+.Lista .Scris ul li >a:visited{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+.Lista .Scris ul li >a:hover{
+    color: aqua;
+    text-decoration: none;
+}
+.Lista .Scris ul li >a:active{
+    color: hsl(224, 50%, 50%);
+    text-decoration: none;
+}
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 80px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover
+{
+  color: lightblue;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+#menuToggle span
+{
+  display: block;
+  width: 40px;
+  height: 8px;
+  margin-bottom: 5px;
+  position: relative;
+  left:10px;
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu
+{
+  position: absolute;
+  width: 30px;
+  height:80px;
+  margin: -100px 0 0 -50px;
+  padding: 80px;
+  padding-top: 100px;
+  
+  background: hsl(212, 55%,34%);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li
+{
+  padding: 10px;
+  font-size: 22px;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
